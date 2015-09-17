@@ -1,0 +1,26 @@
+{
+  "name": "summernote-uploader",
+  "version": "0.0.0",
+  "homepage": "https://github.com/flemse/summernote-uploader",
+  "authors": [
+    "Flemming Thesbjerg <flemming.thesbjerg@gmail.com>"
+  ],
+  "description": "summernote upload button",
+  "main": "index.js",
+  "keywords": [
+    "summernote",
+    "upload",
+    "button"
+  ],
+  "dependencies": {
+    "summernote": "~0.6.16"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
