@@ -12,22 +12,21 @@
 }(function ($) {
   $.summernote.addPlugin({
     name: 'upload',
-    init() { },
+    init: function() { },
     buttons: {
-      upload() {
+      upload: function() {
         var template = $.summernote.renderer.getTemplate().iconButton('fa fa-cloud-upload', {
           event : 'upload',
           title: 'Upload',
           hide: true
         });
-        var input = '<input type="file" multiple="multiple" id="input_uploader_handler" style="display: none;">';
-        $(document).on('change', '#input_uploader_handler', function() {
-        });
+        var input = '<input type="file" multiple="multiple" style="display: none;">';
+
         return template + input;
       }
     },
     events: {
-      upload(event, editor, layoutInfo) {
+      upload: function(event, editor, layoutInfo) {
         var input = $(event.target).parents('.btn-group').find('input[type=file]');
         input.on('change', function() {
           layoutInfo.holder().trigger('summernote.upload', [this.files]);
